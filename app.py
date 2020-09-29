@@ -11,6 +11,7 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage
 
 data_dir = Path(os.path.abspath(os.path.dirname(__file__))) / 'data'
 
+# to fix `Could not find QtWebEngineProcess` error
 if hasattr(sys, '_MEIPASS'):
     if sys.platform == 'darwin':
         os.environ['QTWEBENGINEPROCESS_PATH'] = os.path.normpath(os.path.join(
